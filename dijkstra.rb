@@ -93,7 +93,7 @@ loop do
   print "Enter destination: "
   d = STDIN.gets.chomp.to_i
 
-  dist, prev = dijkstra(graph, s)
+  _, prev = dijkstra(graph, s)
   path       = shortest_path(prev, s, d)
 
   puts "Shortest path from #{s} to #{d} is: #{path.join(', ')}"
